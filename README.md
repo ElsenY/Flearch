@@ -25,7 +25,7 @@ curl -X POST http://localhost:{{PORT_NUMBER}}/api/flight/search \
 ```
 
 The endpoint aggregates data; field names and structure may vary by implementation.
-Additionally, each flight data has "best_price_same_flight" and "best_amenities_same_flight" to give best options with the same flight route.
+Additionally, each flight data has **"best_price_same_flight"** and **"best_amenities_same_flight"** to give best options with the same flight route.
 
 available request body filter field:
 
