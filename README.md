@@ -29,21 +29,21 @@ Additionally, each flight data has **"best_price_same_flight"** and **"best_amen
 
 available request body filter field:
 
-1. origin
-2. destination
-3. departure_date
-4. return_date
-5. passengers
-6. cabin_class
-7. min_price
-8. max_price
-9. stops
-10. duration_minutes
-11. airline
-12. arrival_date
-13. limit
-14. page
-15. sort
+1. origin (filter by specified origin)
+2. destination (filter by destination)
+3. departure_date (filter by departure date)
+4. return_date (since there is no return_date data in the mock json, this filter is going to filter by arrival_date)
+5. passengers (filter by number of seats available, whether X passengers is less or equal than available seats)
+6. cabin_class (filter by cabin class)
+7. min_price (filter by price thats greater than X)
+8. max_price (filter by price thats lower than X)
+9. stops (filter by number of stops)
+10. duration_minutes (filter by total durations in minutes, including layover)
+11. airline (filter by airline)
+12. arrival_date (filter by arrival date, same as return_date filter)
+13. limit (limit how many data can be shown, unlimited by default, need to be used with "page")
+14. page (fetch X page, need to have "limit" to be enabled)
+15. sort_by (sort by available key below)
 
 available sort key (case sensitive):
 1. "price"
