@@ -4,17 +4,17 @@ A backend service that aggregates flight search results from multiple airline pr
 
 ### Prerequisites
 
-- Go 1.21+
+- Go 1.24.4+
 
 ### Running the Application
 
-1. Create a .env file in the root directory, .env.example is provided and can just follow the value
+1. Create a .env file in the root directory, .env.example is provided and can just follow the value (if not created, app will run normally on default config)
 2. then run
 ```bash
 go mod tidy
 go run app/cmd/main.go
 ```
-app should be running on designated port declared in .env folder (8081 by default)
+app should be running on designated port declared in .env folder (default port 8080)
 
 ### Usage
 #### Example: Search for Flights with `curl`
@@ -52,6 +52,8 @@ available sort key (case sensitive):
 4. "arrival_time"
 
 for descending sort, add "-" prefix
+
+_Mock data is located in internal/provider/flightsearch/apimock_
 
 ## Design Decisions
 
